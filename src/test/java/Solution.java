@@ -107,8 +107,16 @@ public class Solution {
             System.out.println(option.getText());
         }
     }
+    @Test
+    public void hw_7(){
+        driver.navigate().to("https://dgotlieb.github.io/WebCalculator/");
+        System.out.println(driver.findElement(By.id("two")).getSize().height);
+        System.out.println(driver.findElement(By.id("six")).getSize().width);
+
+    }
     @AfterClass
     public static void afterClass(){
         driver1.quit();
+        driver.quit();
     }
 }
